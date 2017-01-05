@@ -1,5 +1,7 @@
 package com.example;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -11,10 +13,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @create 2016/12/30.
  */
 @Controller
+@ConfigurationProperties(prefix = "sxp")
 public class MyController {
+
+
+    @Value("${myName}")
+    String myNmae;
+
+    String prop;
+
+    public void setProp(String prop) {
+        this.prop = prop;
+    }
 
     @RequestMapping("/index")
     public String Index(){
+        System.out.println("hello"+myNmae);
+        System.out.println("you are "+prop);
         return "index";
     }
 

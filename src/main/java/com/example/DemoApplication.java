@@ -2,7 +2,6 @@ package com.example;
 
 import com.example.dao.CityMapper;
 import com.example.dao.UserMapper;
-import com.example.domain.City;
 import com.example.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
