@@ -11,6 +11,13 @@ public class User {
     String name;
     String type;
 
+    public User(){}
+
+    public User(String name,String type){
+        this.name=name;
+        this.type=type;
+    }
+
     public String getType() {
         return type;
     }

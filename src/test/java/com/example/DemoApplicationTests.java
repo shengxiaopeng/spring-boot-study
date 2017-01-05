@@ -1,7 +1,9 @@
 package com.example;
 
+import com.example.transaction.TransactionTest;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -15,5 +17,21 @@ public class DemoApplicationTests {
 		System.out.println("-----hello-------");
 
 	}
+
+	/**
+	 * 下面方法测试事务
+     */
+	@Autowired
+	TransactionTest transactionTest;
+
+	@Test
+	public void  testTransaction(){
+
+		//transactionTest.saveWithRollBack();
+        transactionTest.saveWithoutRollBack();
+	}
+
+
+
 
 }
