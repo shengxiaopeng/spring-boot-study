@@ -1,0 +1,15 @@
+
+below is error attributes spring boot provides for us:
+<ul>
+    <li>timestamp:${timestamp}</li>
+    <li>staus:${status}</li>
+
+
+    <li>message:$message</li>
+    <li>path:$path</li>
+    <li>error:$error</li>
+    <li>trace:$trace</li>
+
+    <li>exception:$exception</li>
+    <li>errors:$errors</li>
+</ul>
